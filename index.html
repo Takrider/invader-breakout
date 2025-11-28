@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invader Breakout</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- OGP Settings -->
+    <meta property="og:title" content="Invader Breakout">
+    <meta property="og:description" content="A retro arcade style breakout game with invader elements.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/invader-breakout">
+    <meta property="og:image" content="https://example.com/invader-breakout/ogp.png">
+    <meta property="og:site_name" content="Invader Breakout">
+    <meta property="og:locale" content="ja_JP">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Invader Breakout">
+    <meta name="twitter:description" content="A retro arcade style breakout game with invader elements.">
+    <meta name="twitter:image" content="https://example.com/invader-breakout/ogp.png">
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>INVADER BREAKOUT</h1>
+        <div id="score-board">SCORE: <span id="score">0</span> | LIVES: <span id="lives">5</span></div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="controls-hint">LEFT/RIGHT ARROWS to Move | SPACE to Start</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
