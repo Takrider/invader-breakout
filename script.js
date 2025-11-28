@@ -9,7 +9,6 @@ const audioCtx = new AudioContext();
 
 const hiphopAudio = new Audio('hiphop.mp3');
 hiphopAudio.loop = true;
-
 function playSound(type) {
     if (audioCtx.state === 'suspended') {
         audioCtx.resume();
