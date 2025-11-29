@@ -98,6 +98,7 @@ let lives = 5;
 let gameRunning = false;
 let gameOver = false;
 let gameWon = false;
+let gamePaused = false;
 
 // Paddle
 const paddle = {
@@ -157,6 +158,10 @@ function keyDownHandler(e) {
         rightPressed = true;
     } else if (e.key === 'Left' || e.key === 'ArrowLeft') {
         leftPressed = true;
+    } else if (e.key === 'p' || e.key === 'P') {
+        if (gameRunning && !gameOver && !gameWon) {
+            gamePaused = !gamePaused;
+        }
     } else if (e.code === 'Space') {
         if (!gameRunning && !gameOver && !gameWon) {
             gameRunning = true;
@@ -472,6 +477,12 @@ function draw() {
     }
 
     drawBall();
+
+    if (gamePaused) {
+        // drawMessage("PAUSED", "Press P to Resume");
+        requestAnimationFrame(draw);
+        return;
+    }
     collisionDetection();
 
     // Ball Movement
